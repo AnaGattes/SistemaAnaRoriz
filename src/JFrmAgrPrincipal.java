@@ -38,7 +38,7 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMnuCadastro.setMnemonic('c');
+        jMnuCadastro.setMnemonic('C');
         jMnuCadastro.setText("Cadastros");
         jMnuCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +69,11 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
         jMnuFornecedores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuFornecedores.setMnemonic('F');
         jMnuFornecedores.setText("Fornecedores");
+        jMnuFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuFornecedoresActionPerformed(evt);
+            }
+        });
         jMnuCadastro.add(jMnuFornecedores);
 
         jMnuProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -82,6 +87,7 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
         jMnuCadastro.add(jMnuProdutos);
 
         jMnuVendedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuVendedor.setMnemonic('V');
         jMnuVendedor.setText("Vendedor");
         jMnuVendedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +97,7 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
         jMnuCadastro.add(jMnuVendedor);
 
         jMnuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMnuSair.setMnemonic('S');
         jMnuSair.setText("Sair");
         jMnuSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +108,7 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMnuCadastro);
 
-        jMnuMovimentos.setMnemonic('m');
+        jMnuMovimentos.setMnemonic('M');
         jMnuMovimentos.setText("Movimentos");
         jMenuBar1.add(jMnuMovimentos);
 
@@ -127,14 +134,19 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
 
     private void jMnuProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuProdutosActionPerformed
         // TODO add your handling code here:
+        JDlgAgrProdutos jDlgAgrProdutos = new JDlgAgrProdutos(null, true);
+        jDlgAgrProdutos.setVisible(true);
     }//GEN-LAST:event_jMnuProdutosActionPerformed
 
     private void jMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSairActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jMnuSairActionPerformed
 
     private void jMnuVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuVendedorActionPerformed
         // TODO add your handling code here:
+        JDlgAgrVendedor jDlgAgrVendedor = new JDlgAgrVendedor(null, true);
+        jDlgAgrVendedor.setVisible(true);
     }//GEN-LAST:event_jMnuVendedorActionPerformed
 
     private void jMnuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuUsuariosActionPerformed
@@ -146,7 +158,15 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
 
     private void jMnuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuClientesActionPerformed
         // TODO add your handling code here:
+        JDlgAgrClientes jDlgAgrClientes = new JDlgAgrClientes(null, true);
+        jDlgAgrClientes.setVisible(true);
     }//GEN-LAST:event_jMnuClientesActionPerformed
+
+    private void jMnuFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuFornecedoresActionPerformed
+        // TODO add your handling code here:
+        JDlgAgrFornecedores jDlgAgrFornecedores = new JDlgAgrFornecedores(null, true);
+        jDlgAgrFornecedores.setVisible(true);
+    }//GEN-LAST:event_jMnuFornecedoresActionPerformed
 
     /**
      * @param args the command line arguments
