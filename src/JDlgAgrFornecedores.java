@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
@@ -15,6 +18,106 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
     public JDlgAgrFornecedores(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
+        jTxtNomeCompleto.setEnabled(false);
+        jTxtNomeSocial.setEnabled(false);
+        jFmtCelular.setEnabled(false);
+        jTxtInscricao.setEnabled(false);
+        jTxtEmpresa.setEnabled(false);
+        jFmtCnpj.setEnabled(false);
+        jFmtContato.setEnabled(false);
+        jChbAtivo.setEnabled(false);
+        jTxtInscricao.setEnabled(false);
+        jFmtEmail.setEnabled(false);
+        jFmtTelefone.setEnabled(false);
+        jFmtCelular.setEnabled(false);
+        jFmtCep.setEnabled(false);
+        jTxtEndereco.setEnabled(false);
+        jTxtBairro.setEnabled(false);
+        jTxtCidade.setEnabled(false);
+        jCboEstado.setEnabled(false);
+        jTxtNomeResponsavel.setEnabled(false);
+                jBtnCancelar.setEnabled(false);
+        jBtnConfirmar.setEnabled(false);
+    }
+    
+    public void habilitar(boolean valor){
+        jTxtNomeCompleto.setEnabled(valor);
+        jTxtNomeSocial.setEnabled(valor);
+        jFmtCelular.setEnabled(valor);
+        jTxtInscricao.setEnabled(valor);
+        jTxtEmpresa.setEnabled(valor);
+        jFmtCnpj.setEnabled(valor);
+        jFmtContato.setEnabled(valor);
+        jChbAtivo.setEnabled(valor);
+        jTxtInscricao.setEnabled(valor);
+        jFmtEmail.setEnabled(valor);
+        jFmtTelefone.setEnabled(valor);
+        jFmtCelular.setEnabled(valor);
+        jFmtCep.setEnabled(valor);
+        jTxtEndereco.setEnabled(valor);
+        jTxtBairro.setEnabled(valor);
+        jTxtCidade.setEnabled(valor);
+        jCboEstado.setEnabled(valor);
+        jTxtNomeResponsavel.setEnabled(valor);
+        jBtnCancelar.setEnabled(valor);
+        jBtnConfirmar.setEnabled(valor);
+        jBtnIncluir.setEnabled(!valor);
+        jBtnAlterar.setEnabled(!valor);
+        jBtnExcluir.setEnabled(!valor);
+        jBtnPesquisar.setEnabled(!valor);
+    }
+    public void habilitar(){
+        jTxtNomeCompleto.setEnabled(true);
+        jTxtNomeSocial.setEnabled(true);
+        jFmtCelular.setEnabled(true);
+        jTxtInscricao.setEnabled(true);
+        jTxtEmpresa.setEnabled(true);
+        jFmtCnpj.setEnabled(true);
+        jFmtContato.setEnabled(true);
+        jChbAtivo.setEnabled(true);
+        jTxtInscricao.setEnabled(true);
+        jFmtEmail.setEnabled(true);
+        jFmtTelefone.setEnabled(true);
+        jFmtCelular.setEnabled(true);
+        jFmtCep.setEnabled(true);
+        jTxtEndereco.setEnabled(true);
+        jTxtBairro.setEnabled(true);
+        jTxtCidade.setEnabled(true);
+        jCboEstado.setEnabled(true);
+        jTxtNomeResponsavel.setEnabled(true);
+        jBtnCancelar.setEnabled(true);
+        jBtnConfirmar.setEnabled(true);        
+        jBtnIncluir.setEnabled(false);
+        jBtnAlterar.setEnabled(false);
+        jBtnExcluir.setEnabled(false);
+        jBtnPesquisar.setEnabled(false);
+    }
+    public void desabilitar(){
+        jTxtNomeCompleto.setEnabled(false);
+        jTxtNomeSocial.setEnabled(false);
+        jFmtCelular.setEnabled(false);
+        jTxtInscricao.setEnabled(false);
+        jTxtEmpresa.setEnabled(false);
+        jFmtCnpj.setEnabled(false);
+        jFmtContato.setEnabled(false);
+        jChbAtivo.setEnabled(false);
+        jTxtInscricao.setEnabled(false);
+        jFmtEmail.setEnabled(false);
+        jFmtTelefone.setEnabled(false);
+        jFmtCelular.setEnabled(false);
+        jFmtCep.setEnabled(false);
+        jTxtEndereco.setEnabled(false);
+        jTxtBairro.setEnabled(false);
+        jTxtCidade.setEnabled(false);
+        jCboEstado.setEnabled(false);
+        jTxtNomeResponsavel.setEnabled(false);
+        jBtnCancelar.setEnabled(false);
+        jBtnConfirmar.setEnabled(false);        
+        jBtnIncluir.setEnabled(true);
+        jBtnAlterar.setEnabled(true);
+        jBtnExcluir.setEnabled(true);
+        jBtnPesquisar.setEnabled(true);
     }
 
     /**
@@ -58,6 +161,12 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
         jChbAtivo = new javax.swing.JCheckBox();
         jLabel16 = new javax.swing.JLabel();
         jTxtNomeResponsavel = new javax.swing.JTextField();
+        jBtnIncluir = new javax.swing.JButton();
+        jBtnAlterar = new javax.swing.JButton();
+        jBtnConfirmar = new javax.swing.JButton();
+        jBtnExcluir = new javax.swing.JButton();
+        jBtnCancelar = new javax.swing.JButton();
+        jBtnPesquisar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -103,6 +212,54 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
         jTxtNomeResponsavel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxtNomeResponsavelActionPerformed(evt);
+            }
+        });
+
+        jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnIncluir.setText("Incluir");
+        jBtnIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnIncluirActionPerformed(evt);
+            }
+        });
+
+        jBtnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
+        jBtnAlterar.setText("Alterar");
+        jBtnAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAlterarActionPerformed(evt);
+            }
+        });
+
+        jBtnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/gravar.png"))); // NOI18N
+        jBtnConfirmar.setText("Confirmar");
+        jBtnConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnConfirmarActionPerformed(evt);
+            }
+        });
+
+        jBtnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
+        jBtnExcluir.setText("Excluir");
+        jBtnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnExcluirActionPerformed(evt);
+            }
+        });
+
+        jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
+        jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
+
+        jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnPesquisar.setText("Pesquisar");
+        jBtnPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnPesquisarActionPerformed(evt);
             }
         });
 
@@ -175,6 +332,20 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jChbAtivo)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jBtnIncluir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBtnAlterar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnExcluir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBtnConfirmar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBtnCancelar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBtnPesquisar)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,7 +405,18 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtNomeResponsavel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jChbAtivo))
-                .addGap(0, 71, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBtnCancelar)
+                        .addComponent(jBtnPesquisar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBtnExcluir)
+                        .addComponent(jBtnConfirmar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBtnIncluir)
+                        .addComponent(jBtnAlterar)))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -247,6 +429,32 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
     private void jTxtNomeResponsavelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtNomeResponsavelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTxtNomeResponsavelActionPerformed
+
+    private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
+        //habilitar();
+        habilitar(true);
+    }//GEN-LAST:event_jBtnIncluirActionPerformed
+
+    private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
+        habilitar();
+    }//GEN-LAST:event_jBtnAlterarActionPerformed
+
+    private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
+        desabilitar();
+    }//GEN-LAST:event_jBtnConfirmarActionPerformed
+
+    private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+        JOptionPane.showConfirmDialog(null, "Confirma a exclusão", "Selecione uma opção", JOptionPane.YES_NO_OPTION);        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnExcluirActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        //desabilitar();
+        habilitar(false);
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
+        JOptionPane.showInputDialog(null, "Entre com a chave primária");          // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,6 +499,12 @@ public class JDlgAgrFornecedores extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnAlterar;
+    private javax.swing.JButton jBtnCancelar;
+    private javax.swing.JButton jBtnConfirmar;
+    private javax.swing.JButton jBtnExcluir;
+    private javax.swing.JButton jBtnIncluir;
+    private javax.swing.JButton jBtnPesquisar;
     private javax.swing.JComboBox<String> jCboEstado;
     private javax.swing.JCheckBox jChbAtivo;
     private javax.swing.JFormattedTextField jFmtCelular;
