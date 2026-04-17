@@ -28,10 +28,12 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMnuCadastro = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMnuUsuarios = new javax.swing.JMenuItem();
+        jMnuClientes = new javax.swing.JMenuItem();
+        jMnuFornecedores = new javax.swing.JMenuItem();
+        jMnuProdutos = new javax.swing.JMenuItem();
+        jMnuVendedor = new javax.swing.JMenuItem();
+        jMnuSair = new javax.swing.JMenuItem();
         jMnuMovimentos = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,30 +46,58 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setMnemonic('U');
-        jMenuItem1.setText("Usuários");
-        jMnuCadastro.add(jMenuItem1);
-
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem2.setMnemonic('C');
-        jMenuItem2.setText("Clientes");
-        jMnuCadastro.add(jMenuItem2);
-
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem4.setMnemonic('F');
-        jMenuItem4.setText("Fornecedores");
-        jMnuCadastro.add(jMenuItem4);
-
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem3.setMnemonic('P');
-        jMenuItem3.setText("Produtos");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMnuUsuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuUsuarios.setMnemonic('U');
+        jMnuUsuarios.setText("Usuários");
+        jMnuUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMnuUsuariosActionPerformed(evt);
             }
         });
-        jMnuCadastro.add(jMenuItem3);
+        jMnuCadastro.add(jMnuUsuarios);
+
+        jMnuClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuClientes.setMnemonic('C');
+        jMnuClientes.setText("Clientes");
+        jMnuClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuClientesActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuClientes);
+
+        jMnuFornecedores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuFornecedores.setMnemonic('F');
+        jMnuFornecedores.setText("Fornecedores");
+        jMnuCadastro.add(jMnuFornecedores);
+
+        jMnuProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuProdutos.setMnemonic('P');
+        jMnuProdutos.setText("Produtos");
+        jMnuProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuProdutosActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuProdutos);
+
+        jMnuVendedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuVendedor.setText("Vendedor");
+        jMnuVendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuVendedorActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuVendedor);
+
+        jMnuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        jMnuSair.setText("Sair");
+        jMnuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuSairActionPerformed(evt);
+            }
+        });
+        jMnuCadastro.add(jMnuSair);
 
         jMenuBar1.add(jMnuCadastro);
 
@@ -95,9 +125,28 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMnuCadastroActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMnuProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuProdutosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMnuProdutosActionPerformed
+
+    private void jMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSairActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuSairActionPerformed
+
+    private void jMnuVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuVendedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuVendedorActionPerformed
+
+    private void jMnuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuUsuariosActionPerformed
+        // TODO add your handling code here:
+        JDlgAgrUsuarios jDlgAgrUsuarios = new JDlgAgrUsuarios(null, true);
+        jDlgAgrUsuarios.setVisible(true);
+        
+    }//GEN-LAST:event_jMnuUsuariosActionPerformed
+
+    private void jMnuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuClientesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,11 +185,13 @@ public class JFrmAgrPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenu jMnuCadastro;
+    private javax.swing.JMenuItem jMnuClientes;
+    private javax.swing.JMenuItem jMnuFornecedores;
     private javax.swing.JMenu jMnuMovimentos;
+    private javax.swing.JMenuItem jMnuProdutos;
+    private javax.swing.JMenuItem jMnuSair;
+    private javax.swing.JMenuItem jMnuUsuarios;
+    private javax.swing.JMenuItem jMnuVendedor;
     // End of variables declaration//GEN-END:variables
 }
